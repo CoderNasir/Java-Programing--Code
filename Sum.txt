@@ -1,0 +1,45 @@
+package com.company;
+
+
+import java.util.Scanner;
+
+public class PS1 {
+    public static void main(String[] args) {
+        // Problem 1
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int sum;
+        sum=a+b+c;
+        System.out.println(a+" + "+b+" + "+c+" = "+sum);
+
+        // Problem 2
+        System.out.println("Calculate CGPA ");
+        int sub1=sc.nextInt();
+        int sub2=sc.nextInt();
+        int sub3=sc.nextInt();
+        float CGPA;
+        CGPA=(float)(sub1+sub2+sub3)/30;
+        System.out.println("CGPA Of 3 Subject= "+CGPA);
+
+        // Problem 3
+        System.out.println("Problem 3");
+        sc.nextLine();
+        String name=sc.nextLine();
+        System.out.println("Hello "+name+", have a good day");
+
+        //Problem 4
+        System.out.println("Enter Kilometer...");
+        int K=sc.nextInt();
+        double M;
+        M=0.62137119*K;
+        System.out.println(M+" miles");
+
+        //Problem 5
+        System.out.println("Enter Your Number");
+        System.out.println(sc.hasNextInt());
+
+    }
+}
+// Contributed By Nasir
