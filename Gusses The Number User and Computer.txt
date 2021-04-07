@@ -1,0 +1,57 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+class Game{
+    int UserInput;
+    int ComputerInput;
+    int noOfGusses;
+
+    public int getNoOfGusses() {
+        return noOfGusses;
+    }
+
+    public void setNoOfGusses(int noOfGusses) {
+        this.noOfGusses = noOfGusses;
+    }
+
+    public void TakeUserInput(){
+        System.out.println("Gusses The Number");
+        Scanner sc= new Scanner(System.in);
+        UserInput=sc.nextInt();
+    }
+
+    public Game() {
+        Random random = new Random();
+        ComputerInput = random.nextInt(100);
+    }
+    boolean isCorrectNumber(){
+        noOfGusses++;
+        if(UserInput==ComputerInput){
+            System.out.println("Both Number Choise Are Same And Number.....="+UserInput);
+            System.out.println("All Attempted The Complite Gusses Numbe="+noOfGusses);
+            return true;
+        }
+        else if(UserInput>ComputerInput){
+            System.out.println("Your Number Is High Comper to Computer Number......");
+        }
+        else if(UserInput<ComputerInput){
+            System.out.println("Your Number Is Low Compper To Computer number.....");
+        }
+        return false;
+    }
+}
+public class Game_GussesNum {
+    public static void main(String[] args) {
+     Game GG=new Game();
+     boolean b=false;
+     while(!b){
+         GG.TakeUserInput();
+         b=GG.isCorrectNumber();
+         System.out.println(b);
+     }
+    }
+}
+
+// Contributed By Nasir Husian
