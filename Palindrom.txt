@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Palindrom {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n;
+        int r=0;
+        while(temp>0){
+            int LastDigit=temp%10;
+            r=r*10 + LastDigit;
+            temp=temp/10;
+        }
+        if(r==n){
+            System.out.println("This Number Is Palindron");
+        }
+        else {
+            System.out.println("This Number Is Not Palindrom");
+        }
+    }
+}
+
+// Contributed By Nasir Husian
