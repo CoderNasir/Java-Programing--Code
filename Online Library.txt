@@ -1,0 +1,60 @@
+package com.company;
+class library{
+    String[] books;
+    int no_of_books;
+    int s=1;
+    library(){
+        this.books= new String[100];
+        this.no_of_books=0;
+    }
+    void addBook(String book){
+        this.books[no_of_books]=book;
+        System.out.println(book+" has been add!");
+        no_of_books++;
+    }
+    void showavailablebooks(){
+        System.out.println("Available Books----");
+        for(String book:this.books){
+            if(book==null){
+                continue;
+            }
+            System.out.println(s+"  "+book);
+            s++;
+        }
+    }
+    void issuebooks(String book){
+         for(int i=0;i<this.books.length;i++){
+             if(this.books[i].equals(book)) {
+                 System.out.println(book+" The book hasbeen issued!");
+                 this.books[i] = null;
+                 return;
+             }
+         }
+        System.out.println("this book does not exist");
+    }
+    void returnBook(String book){
+        addBook(book);
+    }
+}
+
+public class CWN_EX4_OL {
+    public static void main(String[] args) {
+        // You have to implement a library using Java Class "Library"
+        // Methods: addBook, issueBook, returnBook, showAvailableBooks
+        // Properties: Array to store the available books,
+        // Array to store the issued books
+       library OL=new library();
+        OL.addBook("Programming of Java and learn of java");
+        OL.addBook("C++");
+        OL.addBook("Python learner");
+        OL.showavailablebooks();
+        OL.issuebooks("C++");
+        OL.showavailablebooks();
+        OL.returnBook("C++");
+        OL.showavailablebooks();
+
+    }
+}
+
+
+//Contributed By--- Nasir Husian
