@@ -1,0 +1,33 @@
+package com.company;
+
+public class PN1 {
+    public static void main(String[] args) {
+        String J1="J";
+        String J2="A";
+        String J3="V";
+        for (int i=0;i<4;i++){
+            for (int j=0;j<27;j++){
+                if(i==0 & j==3 || i==1 & j==3 || i==2 & (j==0 || j==3) || i==3 & (j==1 || j==2)){
+                    System.out.print(J1);
+                }
+                else if(i==0 & j==9 ||i==1 & j==8 ||i==1 & j==10 || i==2 & (j==7 || j==8 ||j==9||j==10||j==11) || i==3 & (j==6||j==12)){
+                    System.out.print(J2);
+                }
+                else if(i==0 & (j==13 || j==19) || i==1 & (j==14 || j==18) || i==2 &(j==15 || j==17) || i==3 & j==16){
+                    System.out.print(J3);
+                }
+                else if(i==0 & j==23 ||i==1 & j==22 ||i==1 & j==24 || i==2 & (j==21 || j==22 ||j==23||j==24||j==25) || i==3 & (j==20||j==26)){
+                    System.out.print(J2);
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+
+    }
+}
+
+
+// Contributed By Nasir Husian
