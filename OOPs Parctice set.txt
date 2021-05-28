@@ -1,0 +1,115 @@
+package com.company;
+class Cylinder{
+    private int radius;
+    private int height;
+    public Cylinder(int radius,int height){
+        this.radius=radius;
+        this.height=height;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+    public double Area(){
+        return 2* Math.PI*radius*height + 2*Math.PI*radius*radius;
+    }
+    public double volume(){
+        return Math.PI*radius*radius*height;
+    }
+}
+   class Rectangle1{
+    private int length;
+    private int width;
+
+       public Rectangle1(){
+           this.width = 12;
+           this.length=15;
+
+       }
+
+       public Rectangle1(int length, int width) {
+           this.length = length;
+           this.width = width;
+       }
+
+       public int getLength() {
+           return length;
+       }
+
+       public int getWidth() {
+           return width;
+       }
+   }
+
+   class Sphere{
+    private int radius;
+
+       public int getRadius() {
+           return radius;
+       }
+
+       public void setRadius(int radius) {
+           this.radius = radius;
+       }
+   }
+
+
+
+
+public class CWN_CH9_PS {
+    public static void main(String[] args) {
+        /*
+
+        //Problem 1
+        Cylinder Mycylinder=new Cylinder();
+        Mycylinder.setRadius(9);
+        System.out.println("Radius="+Mycylinder.getRadius());
+        Mycylinder.setHeight(12);
+        System.out.println("Height="+Mycylinder.getHeight());
+
+     //Problem 2
+        System.out.println("Cylinder Area="+Mycylinder.Area());
+        System.out.println("Cylinder Volume="+Mycylinder.volume());
+
+
+
+        //Problem 3
+//         Cylinder Mycylinder=new Cylinder(9 ,12);
+//        System.out.println(Mycylinder.getHeight());
+//        System.out.println(Mycylinder.getRadius());
+
+
+
+
+         //Problem 4
+         Rectangle1 RR=new Rectangle1(20,30);
+         System.out.println(RR.getLength());
+         System.out.println(RR.getWidth());
+
+         */
+
+        //Problem 5
+        Sphere S=new Sphere();
+        S.setRadius(20);
+        System.out.println("Shepe Radius="+S.getRadius());
+
+
+
+
+    }
+}
+
+
+//Contributed By nasir Husian
